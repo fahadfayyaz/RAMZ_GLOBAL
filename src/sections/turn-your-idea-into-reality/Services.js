@@ -4,7 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Box, Text, Title } from "../../components/Core";
 import styled, { keyframes } from "styled-components";
-
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 const animRippleOut = keyframes`
     100% {
       top: -12px;
@@ -76,49 +77,56 @@ const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
   </Box>
 );
 
-const Feature = () => (
-  <>
-    <Section pt="0!important">
-      <Container>
-        <div className="text-center">
-          <Title color="dark" style={{ fontSize: "4em", marginTop: "60px" }}>
-            At Ramz Global We Can Help You With <br></br>
-          </Title>
-        </div>
-        <Row className="">
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="secondary" title="Validating Your Idea">
-              Suppose you have an idea of a great web or mobile application. In
-              that case, our team of professional developers will help you in
-              the validation of your idea to check if it is possible to
-              implement it in real-world scenarios. This is the main step for
-              making a great application, and it is the most difficult one. Our
-              team of experienced developers will take your requirements and
-              will purpose a customized solution based on your requirements.
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="primary" title="Making It Happen">
-              Not only do we help you in validating your idea for a great
-              application, but we also make it happen for you. We take care of
-              all the application design, programming, database design, and any
-              other thing that requires a professional developer's services to
-              turn your idea into a real-time working application.
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="warning" title="Support">
-              Unlike other agencies, we are not limited to just developing web
-              applications. We also provide long-term support and maintenance
-              services to our customers. We have a dedicated team to support our
-              customers, which makes us best among all the apps and software
-              development companies.
-            </FeatureCard>
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-  </>
-);
-
+const Feature = () => {
+  const { t } = useTranslation(["common"]);
+  return (
+    <>
+      <Section pt="0!important">
+        <Container>
+          <div className="text-center">
+            <Title color="dark" style={{ fontSize: "4em", marginTop: "60px" }}>
+              {t("At Ramz Global We Can Help You With")} <br></br>
+            </Title>
+          </div>
+          <Row className="">
+            <Col md="6" xl="4" className="mb-5">
+              <FeatureCard color="secondary" title={t("Validating Your Idea")}>
+                {""}
+                Suppose you have an idea of a great web or mobile application.
+                In that case, our team of professional developers will help you
+                in the validation of your idea to check if it is possible to
+                implement it in real-world scenarios. This is the main step for
+                making a great application, and it is the most difficult one.
+                Our team of experienced developers will take your requirements
+                and will purpose a customized solution based on your
+                requirements.
+              </FeatureCard>
+            </Col>
+            <Col md="6" xl="4" className="mb-5">
+              <FeatureCard color="primary" title="Making It Happen">
+                Not only do we help you in validating your idea for a great
+                application, but we also make it happen for you. We take care of
+                all the application design, programming, database design, and
+                any other thing that requires a professional developer's
+                services to turn your idea into a real-time working application.
+              </FeatureCard>
+            </Col>
+            <Col md="6" xl="4" className="mb-5">
+              <FeatureCard color="warning" title="Support">
+                Unlike other agencies, we are not limited to just developing web
+                applications. We also provide long-term support and maintenance
+                services to our customers. We have a dedicated team to support
+                our customers, which makes us best among all the apps and
+                software development companies.
+              </FeatureCard>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+    </>
+  );
+  Feature.propTypes = {
+    t: PropTypes.func.isRequired,
+  };
+};
 export default Feature;

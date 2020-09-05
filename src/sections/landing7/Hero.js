@@ -1,9 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 
 const Hero = () => {
+  const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -25,10 +28,9 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="700"
                 >
-                  Are you looking for effective mobile application development
-                  services for your business?
-                  <br />
-                  Do you want to put life into your mobile application idea?
+                  {t(
+                    "Do you want to put life into your mobile application idea?"
+                  )}
                 </Text>
                 <Title
                   my={4}
@@ -58,6 +60,10 @@ const Hero = () => {
       </Section>
     </>
   );
+};
+
+Hero.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Hero;

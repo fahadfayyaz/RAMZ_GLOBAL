@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "../../i18n";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import Section from "../components/Section";

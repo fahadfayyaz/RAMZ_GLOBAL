@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "../../i18n";
 import { rgba } from "polished";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";

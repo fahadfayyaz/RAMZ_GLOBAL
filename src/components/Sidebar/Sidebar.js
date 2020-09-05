@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "../../i18n";
 
 import { Title, Text, Box, Span } from "../Core";
 

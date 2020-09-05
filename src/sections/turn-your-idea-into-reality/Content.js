@@ -4,6 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Text, Box, Span } from "../../components/Core";
 import { device } from "../../utils";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 const SectionStyled = styled(Section)``;
 
@@ -66,6 +68,7 @@ const ContentCard = ({ children = "" }) => {
 };
 
 const Content = () => {
+  const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Content section --> */}
@@ -74,28 +77,15 @@ const Content = () => {
           <Row className="justify-content-center mb-5">
             <Col lg="10">
               <div className="text-center">
-                <Title color="light">It All Starts With A Great Idea</Title>
+                <Title color="light">
+                  {t("It All Starts With A Great Idea")}
+                </Title>
               </div>
 
               <Text mb={4} color="light" textAlign="Center" opacity={0.7}>
-                Everything begins with an idea. If you look at all great
-                applications and Softwares today that are very successful these
-                days, they all started with a very basic idea. Here we have a
-                lot of examples like Facebook, Whatsapp, Uber, Careem, etc.
-                These are the businesses that are solely created on the base of
-                programs and software. The thing is that they implemented their
-                ideas well and invested their time and money in developing these
-                amazing apps and websites. At Ramz Global, we take your ideas
-                and convert them into stunning web-applications and software
-                solutions.
+                {t("turnYouridea")}
                 <br className="d-none d-sm-block d-md-none d-xl-block" />
-                If you are a business owner and want to simplify your business
-                processes, then coming up with an idea of mobile application,
-                web application, or desktop application is an easy task, but
-                implementing that idea an turning that idea into a real-time
-                working application is quite a difficult task. You might be
-                looking for a developer to help you turn your vision into
-                reality for this purpose. This is what we do at Ramz Global.
+                {t("turnYouridea1")}
               </Text>
             </Col>
           </Row>
@@ -103,6 +93,9 @@ const Content = () => {
       </SectionStyled>
     </>
   );
+  Content.propTypes = {
+    t: PropTypes.func.isRequired,
+  };
 };
 
 export default Content;

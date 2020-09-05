@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import Link from "next/link";
+import { Link } from "../../i18n";
 
 import GlobalContext from "../../context/GlobalContext";
 import Offcanvas from "../Offcanvas";
@@ -11,6 +11,7 @@ import NestedMenu from "../NestedMenu";
 import { device } from "../../utils";
 import Logo from "../Logo";
 import { menuItems } from "./menuItems";
+import ChangeLang from "./ChangeLang";
 
 const SiteHeader = styled.header`
   padding: 10px 0 10px 0;
@@ -353,6 +354,7 @@ const Header = ({ isDark = false }) => {
                       );
                     }
                   )}
+                  <ChangeLang MenuDropdown={MenuDropdown} isDark={isDark} />
                 </Menu>
               </div>
             </div>

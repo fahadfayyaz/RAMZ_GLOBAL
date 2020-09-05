@@ -12,6 +12,8 @@ import {
 } from "../../components/Core";
 
 import { device } from "../../utils";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 import imgL2HeroOval1 from "../../assets/image/png/l2-hero-oval1.png";
 import imgL2HeroOval2 from "../../assets/image/png/l2-hero-oval2.png";
@@ -55,6 +57,7 @@ const ImageBottom = styled(Box)`
 `;
 
 const Hero = () => {
+  const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -96,14 +99,10 @@ const Hero = () => {
             >
               <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                 <Title style={{ color: "white" }} variant="hero">
-                  Turn Your Idea Into Reality
+                  {t("Turn Your Idea Into Reality")}
                 </Title>
                 <Text style={{ color: "white" }} mb={4}>
-                  Do you have an idea for a customized software? It could be
-                  anything like a mobile application, a web application, of a
-                  Desktop application developed to meet your business needs. At
-                  Ramz Global, we help you to turn your software ideas into a
-                  reality.
+                  {t("turnYouridea3")}
                 </Text>
                 {/* <form action="/">
                   <div className="position-relative">
@@ -140,6 +139,8 @@ const Hero = () => {
       </SectionStyled>
     </>
   );
+  Hero.propTypes = {
+    t: PropTypes.func.isRequired,
+  };
 };
-
 export default Hero;

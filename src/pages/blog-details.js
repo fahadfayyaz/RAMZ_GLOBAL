@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "../../i18n";
 import { Container, Row, Col } from "react-bootstrap";
 
 import PageWrapper from "../components/PageWrapper";

@@ -4,6 +4,8 @@ import { saturate, lighten } from "polished";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 import { device } from "../../utils";
 import imgHeroTab from "../../assets/image/jpeg/abouthero.jpg";
@@ -31,6 +33,8 @@ const ImgRight = styled(Box)`
 `;
 
 const Hero = () => {
+  const { t } = useTranslation(["common"]);
+
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -65,18 +69,10 @@ const Hero = () => {
               >
                 <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                   <Title variant="hero" color="light">
-                    Who We Are? <br className="d-none d-sm-block" />
+                    {t("Who We Are?")} <br className="d-none d-sm-block" />
                   </Title>
                   <Text mb={4} color="light" opacity={0.7}>
-                    Ramz Global is one of the emerging digital agency enriching
-                    digital experiences by providing creative and innovative
-                    solutions to small and medium scale businesses all across
-                    the globe. Every day we try to assist you and turn your
-                    mobile and web application ideas into reality. We have state
-                    of the art development tools, skills, and a team of highly
-                    trained professionals to meet all your business needs and
-                    provide you with cutting edge solutions delivered at your
-                    doorsteps.
+                    {t("abouthero")}
                   </Text>
                   <div className="d-flex flex-column align-items-start pt-3">
                     <Button mb={2}>Learn more</Button>
@@ -89,6 +85,10 @@ const Hero = () => {
       </SectionStyled>
     </>
   );
+};
+
+Hero.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Hero;

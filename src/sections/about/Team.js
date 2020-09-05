@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 import { Title, Section, Box, Text } from "../../components/Core";
 
@@ -46,57 +48,59 @@ const TeamCard = ({ userImg, title, children, ...rest }) => (
   </Box>
 );
 
-const Team = () => (
-  <>
-    {/* <!-- Team section --> */}
-    <Section className="position-relative pt-5">
-      <Container>
-        <Row className="justify-content-center">
-          <Col lg="6" className="text-center pb-3">
-            <div className="">
-              <Title>Meet the team</Title>
-              <Text>
-                Create custom landing pages with Omega that converts more
-                visitors than any website.{" "}
-              </Text>
-            </div>
-          </Col>
-        </Row>
-        <Row className="align-items-center justify-content-center">
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU1} title="Louise Elliott">
-              Founder and CEO
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU2} title="Trevor Fleming">
-              CTO
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU3} title="Raymond Baker">
-              Software Engineer
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU4} title="George Torres">
-              UX Designer
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU5} title="Daisy Ferguson">
-              Content Writer
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU6} title="Todd Summers">
-              Digital Marketer
-            </TeamCard>
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-  </>
-);
-
+const Team = () => {
+  const { t } = useTranslation(["common"]);
+  return (
+    <>
+      {/* <!-- Team section --> */}
+      <Section className="position-relative pt-5">
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg="6" className="text-center pb-3">
+              <div className="">
+                <Title>{t("Meet the team")}</Title>
+                <Text>{t("Create")} </Text>
+              </div>
+            </Col>
+          </Row>
+          <Row className="align-items-center justify-content-center">
+            <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+              <TeamCard userImg={imgU1} title="Louise Elliott">
+                {t("Founder and CEO")}
+              </TeamCard>
+            </Col>
+            <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+              <TeamCard userImg={imgU2} title="Trevor Fleming">
+                {t("CTO")}
+              </TeamCard>
+            </Col>
+            <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+              <TeamCard userImg={imgU3} title="Raymond Baker">
+                {t("Software Engineer")}
+              </TeamCard>
+            </Col>
+            <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+              <TeamCard userImg={imgU4} title="George Torres">
+                {t("UX Designer")}
+              </TeamCard>
+            </Col>
+            <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+              <TeamCard userImg={imgU5} title="Daisy Ferguson">
+                {t("Content Writer")}
+              </TeamCard>
+            </Col>
+            <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+              <TeamCard userImg={imgU6} title="Todd Summers">
+                {t("Digital Marketer")}
+              </TeamCard>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+    </>
+  );
+};
+Team.propTypes = {
+  t: PropTypes.func.isRequired,
+};
 export default Team;

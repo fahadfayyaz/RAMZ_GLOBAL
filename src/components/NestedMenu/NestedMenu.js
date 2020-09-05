@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { ListGroup, Collapse } from "react-bootstrap";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
-import Link from "next/link";
+import { Link } from "../../i18n";
 import GlobalContext from "../../context/GlobalContext";
 
 const NestedMenuContainer = styled.div`

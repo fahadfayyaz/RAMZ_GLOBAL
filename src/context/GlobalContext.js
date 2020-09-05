@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const GlobalContext = React.createContext();
 
@@ -9,6 +10,7 @@ const GlobalProvider = ({ children }) => {
   const [headerDark, setHeaderDark] = useState(false);
   const [footerDark, setFooterDark] = useState(true);
   const [cartTotal, setCartTotal] = useState(3);
+  const { query } = useRouter();
 
   const toggleTheme = () => {
     setThemeDark(!themeDark);
@@ -61,6 +63,7 @@ const GlobalProvider = ({ children }) => {
         cartTotal,
         incCartTotal,
         decCartTotal,
+        lang: query.lang || "",
       }}
     >
       {children}
