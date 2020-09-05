@@ -11,7 +11,7 @@ import Content3 from "../sections/customized-software-development/Content3";
 const LandingPage2 = () => {
   return (
     <>
-      <PageWrapper headerDark>
+      <PageWrapper headerDark footerDark>
         <Hero />
         <Feature1 />
         <Content1 />

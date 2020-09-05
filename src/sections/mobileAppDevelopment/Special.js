@@ -6,7 +6,8 @@ const SectionStyled = styled(Section)``;
 import { Title, Section, Box, Text } from "../../components/Core";
 
 import { GiCutDiamond } from "react-icons/gi";
-
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png";
 import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png";
 import imgB3 from "../../assets/image/png/testimonial-brand-3.png";
@@ -106,6 +107,8 @@ const ContentCard = ({
 );
 
 const Special = () => {
+  const { t } = useTranslation(["common"]);
+
   return (
     <>
       <Section bg="dark">
@@ -116,7 +119,7 @@ const Special = () => {
                 <Col lg="10">
                   <div className="text-center">
                     <Title color="light">
-                      What Makes Us Different From Others?
+                      {t("What Makes Us Different From Others?")}
                     </Title>
                   </div>
                 </Col>
@@ -126,12 +129,9 @@ const Special = () => {
                   <FeatureCard
                     color="secondary"
                     iconName="icon-sidebar-2"
-                    title="Experienced Team"
+                    title={t("Experienced Team")}
                   >
-                    We have a team of experienced mobile application developers
-                    for various platforms. They have years of experience in
-                    their respective fields and we have already worked with
-                    hundreds of customers and satisfied all of them.
+                    {t("mobile1")}
                   </FeatureCard>
                 </Col>
 
@@ -139,12 +139,9 @@ const Special = () => {
                   <FeatureCard
                     color="primary"
                     iconName="icon-layout-11"
-                    title="Affordable Solutions"
+                    title={t("Affordable Solutions")}
                   >
-                    We offer premium quality services at the most affordable and
-                    competitive rates in the market. We are very transparent in
-                    our pricing, and we never charge any additional costs to our
-                    customers in terms of hidden charges.
+                    {t("mobile2")}
                   </FeatureCard>
                 </Col>
 
@@ -152,11 +149,9 @@ const Special = () => {
                   <FeatureCard
                     color="secondary"
                     icon={<GiCutDiamond color="blue" />}
-                    title="100% Customer Satisfaction"
+                    title={t("100% Customer Satisfaction")}
                   >
-                    Customer satisfaction matters a lot for us and, we always go
-                    the extra mile to make sure that all our customers are 100%
-                    satisfied with our services.
+                    {t("mobile3")}
                   </FeatureCard>
                 </Col>
 
@@ -164,10 +159,9 @@ const Special = () => {
                   <FeatureCard
                     color="primary"
                     iconName="icon-infinite"
-                    title="Domain Expertise"
+                    title={t("Domain Expertise")}
                   >
-                    We have an expert from every domain to assure you that you
-                    get high-quality services and satisfying results.
+                    {t("mobile4")}
                   </FeatureCard>
                 </Col>
               </Row>
@@ -177,6 +171,10 @@ const Special = () => {
       </Section>
     </>
   );
+};
+
+Special.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Special;

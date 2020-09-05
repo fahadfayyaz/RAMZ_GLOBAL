@@ -8,7 +8,10 @@ export const menuItems = [
         label: "Turn Your Idea Into Reality",
       },
       { name: "mobile-app-development", label: "Mobile App Development" },
-      { name: "content-marketing", label: "Content Marketing" },
+      {
+        name: "progressive-web-application-development",
+        label: "Progressive Web Application Development",
+      },
       { name: "website-development", label: "Website Development" },
       {
         name: "customized-software-development",

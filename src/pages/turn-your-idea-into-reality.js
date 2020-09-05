@@ -8,8 +8,8 @@ import Header from "../components/Header";
 const GraphicDesign = () => {
   return (
     <>
-      <Header />
-      <PageWrapper>
+      {/* <Header /> */}
+      <PageWrapper headerDark footerDark>
         <Hero />
         <Content />
         <Services />
