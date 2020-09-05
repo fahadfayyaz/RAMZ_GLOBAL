@@ -16,6 +16,8 @@ import { device } from "../../utils";
 import imgL2HeroOval1 from "../../assets/image/png/l2-hero-oval1.png";
 import imgL2HeroOval2 from "../../assets/image/png/l2-hero-oval2.png";
 import imgL2HeroBg from "../../assets/image/jpeg/process-bg.jpg";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 const SectionStyled = styled(Section)`
   background: url(${imgL2HeroBg}) no-repeat;
@@ -55,6 +57,7 @@ const ImageBottom = styled(Box)`
 `;
 
 const Hero = () => {
+  const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -96,14 +99,10 @@ const Hero = () => {
             >
               <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                 <Title style={{ color: "white" }} variant="hero">
-                  Customized Software Development - Ramz Global
+                  {t('Customized Software Development - Ramz Global')}
                 </Title>
                 <Text style={{ color: "white" }} mb={4}>
-                  Ramz Global is among the rapidly growing custom software
-                  development agencies. We are specialized in the development of
-                  custom software applications. Our company can help you with
-                  programming, designing, database design, client-server, and
-                  internet/intranet software application development.
+                 {t('PARA1')}
                 </Text>
                 {/* <form action="/">
                   <div className="position-relative">
@@ -140,6 +139,9 @@ const Hero = () => {
       </SectionStyled>
     </>
   );
+};
+Hero.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Hero;

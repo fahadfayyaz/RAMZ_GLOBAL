@@ -8,6 +8,8 @@ import { device } from "../../utils";
 import imgMobile from "../../assets/image/jpeg/vimg.jpg";
 import icon3dModel from "../../assets/image/png/icon-3d-model.png";
 import iconLayout from "../../assets/image/png/icon-layot-25.png";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 const ContentCard = ({ iconImage, title, className, children, ...rest }) => (
   <Box
@@ -45,7 +47,9 @@ const ImgStyled = styled.img`
   }
 `;
 
-const Content2 = () => (
+const Content2 = () => {
+  const { t } = useTranslation(["common"]);
+return(
   <>
     {/* <!-- Content section 2 --> */}
     <Section>
@@ -65,48 +69,42 @@ const Content2 = () => (
           <Col lg="6" md="9">
             <Box className="pt-5 pt-lg-0">
               <Title>
-                What Kind of Softwares{" "}
-                <br className="d-none d-sm-block d-md-none d-xl-block" /> do We
-                Develop?
+                {t("What Kind of Softwares")}
+                <br className="d-none d-sm-block d-md-none d-xl-block" />{t("Do We Develop?")}
               </Title>
               <Text>
-                Create custom landing pages with Omega that converts more
-                visitors than any website. With lots of unique blocks, you can
-                easily build a page without coding.
+                {t("PARA4")}
               </Text>
               <Box mt={4} pt={3}>
                 <ContentCard
-                  title="Customized Mobile Applications"
+                  title={t("Customized Mobile Applications")}
                   iconImage={icon3dModel}
                   mb={4}
                 >
-                  Get your customized mobile applications developed by the hands
-                  of your professional. If you need any kind of application for
-                  your business needs, then we got you covered.
+                 {t("PARA5")}
                 </ContentCard>
                 <ContentCard
-                  title="Customized Desktop Applications"
+                  title={t("Customized Desktop Applications")}
                   iconImage={iconLayout}
                 >
-                  We develop multipurpose desktop applications for your
-                  businesses according to your customized specifications.
+                  {t("PARA6")}
+                 
                 </ContentCard>
 
                 <ContentCard
-                  title="Customized Cloud-Based Applications"
+                  title={t("Customized Cloud-Based Applications")}
                   iconImage={iconLayout}
                 >
-                  We provide custom cloud-based applications that are fast,
-                  efficient, and tailor-made according to your business needs.
+                   {t("PARA7")}
+                  
                 </ContentCard>
 
                 <ContentCard
-                  title="Customized Web Applications"
+                  title={t("Customized Web Applications")}
                   iconImage={iconLayout}
                 >
-                  We develop multipurpose web applications to meet all your
-                  business needs and to provide you with ease to handle your
-                  business processes by sitting anywhere in the world.
+                  {t("PARA8")}
+                 
                 </ContentCard>
               </Box>
             </Box>
@@ -116,5 +114,10 @@ const Content2 = () => (
     </Section>
   </>
 );
+};
+
+Content2.propTypes = {
+  t: PropTypes.func.isRequired,
+};
 
 export default Content2;

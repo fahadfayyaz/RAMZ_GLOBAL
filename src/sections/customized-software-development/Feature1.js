@@ -3,7 +3,8 @@ import { rgba } from "polished";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
-
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 const FeatureCard = ({
   color = "primary",
   iconName,
@@ -48,7 +49,11 @@ const FeatureCard = ({
   </Box>
 );
 
-const Feature = () => (
+const Feature = () => {
+
+const { t } = useTranslation(["common"]);
+
+return(
   <>
     <Section bg="ash">
       <Container>
@@ -64,15 +69,12 @@ const Feature = () => (
           >
             <Box>
               <Title color="light">
-                Why Choose Ramz Global For Customized Software Development?{" "}
+                {t("Why Choose Ramz Global For Customized Software Development?")}
               </Title>
               <Text color="light" opacity={0.7}>
-                We use the most advanced web technologies for your software
-                solution development. Our use of cutting technologies makes us
-                able to deliver our clients the latest and fast software for
-                their business solutions.
+                {t("PARA9")}
               </Text>
-              <Button mt={4}>Learn more</Button>
+              <Button mt={4}>{t("Learn more")}</Button>
             </Box>
           </Col>
           <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">
@@ -88,12 +90,9 @@ const Feature = () => (
                   <FeatureCard
                     color="primary"
                     iconName="icon-layout-11"
-                    title="Privacy Protection"
+                    title={t("Privacy Protection")}
                   >
-                    We value our clients’ privacy, and we do not share any kind
-                    of information related to their business with any 3rd party.
-                    We know how valuable your information is; therefore we
-                    assure you that your information and data are secure.
+                    {t("PARA10")}
                   </FeatureCard>
                 </Col>
                 <Col
@@ -107,14 +106,10 @@ const Feature = () => (
                   <FeatureCard
                     color="ash"
                     iconName="icon-sidebar-2"
-                    title="Transparency And Reliability
-"
+                    title={t("Transparency And Reliability")}
                   >
-                    Ramz Global is the name of reliability. We use clean
-                    processes for all kinds of transactions and we are very
-                    clear about prices. There is no ambiguity in our pricings.
-                    We charge our clients fairly and we do not charge extra in
-                    terms of hidden charges.
+                    {t("PARA11")}
+                   
                   </FeatureCard>
                 </Col>
                 <Col
@@ -128,13 +123,11 @@ const Feature = () => (
                   <FeatureCard
                     color="dark"
                     iconName="icon-voice-recognition-2"
-                    title="100% Customer Satisfaction"
+                    title={t("100% Customer Satisfaction")}
                   >
-                    We assure you 100% customer satisfaction. We always go
-                    beyond and extra mile to make sure that our customers’
-                    requirements are met in a way they wanted and they are 100%
-                    satisfied with my services. We believe that a happy customer
-                    means more business so we value it a lot.
+                    {t("PARA12")}
+                   
+                   
                   </FeatureCard>
                 </Col>
               </Row>
@@ -145,5 +138,10 @@ const Feature = () => (
     </Section>
   </>
 );
+};
+
+Feature.propTypes = {
+  t: PropTypes.func.isRequired,
+};
 
 export default Feature;

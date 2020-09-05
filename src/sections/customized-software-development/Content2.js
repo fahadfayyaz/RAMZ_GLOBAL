@@ -6,6 +6,8 @@ import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 import imgContentBig from "../../assets/image/jpeg/l2-content3-big.jpg";
 import imgOval from "../../assets/image/png/l2-content3-oval.png";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -36,7 +38,9 @@ const ImageRight = styled(Box)`
   }
 `;
 
-const Content2 = () => (
+const Content2 = () => { 
+  const { t } = useTranslation(["common"]);
+return (
   <>
     {/* <!-- Content section 1 --> */}
     <Section>
@@ -70,14 +74,12 @@ const Content2 = () => (
               data-aos-once="true"
             >
               <div>
-                <Title>Save tons of time on design & coding.</Title>
+                <Title>{T("Save tons of time on design & coding.")}</Title>
                 <Text mb={4}>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website. With lots of unique blocks, you can
-                  easily build a page without coding.
+                 {t("PARA3")}
                 </Text>
 
-                <Button mt={3}>Get Started</Button>
+                <Button mt={3}>{t("Get Started")}</Button>
               </div>
             </div>
           </Col>
@@ -86,5 +88,10 @@ const Content2 = () => (
     </Section>
   </>
 );
+};
+
+Content2.propTypes = {
+  t: PropTypes.func.isRequired,
+};
 
 export default Content2;

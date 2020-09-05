@@ -7,6 +7,8 @@ import { device } from "../../utils";
 
 import imgRounded from "../../assets/image/png/l2-content1-oval.png";
 import imgHalf from "../../assets/image/png/img11.png";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 const ImageHalfContainer = styled(Box)`
   position: static;
@@ -57,7 +59,10 @@ const ImageBottom = styled(Box)`
   }
 `;
 
-const Content1 = () => (
+const Content1 = () => {
+  const { t } = useTranslation(["common"]);
+  
+  return(
   <>
     <div className="overflow-hidden">
       <Container>
@@ -73,20 +78,12 @@ const Content1 = () => (
             <Section py={[5, null, null, "190px"]}>
               <div className="omga-02__content-text section-title order-lg-1">
                 <Title>
-                  What Do We do? <br className="d-none d-sm-block" />
+                  {t("What Do We Do?")} <br className="d-none d-sm-block" />
                 </Title>
                 <Text>
-                  We develop a wide range of customized software solutions for
-                  mobile, desktop, and web. We have a team of specialized and
-                  experienced software developers who will help you from
-                  validating your idea of customized software to development,
-                  testing, and maintenance. We develop a wide array of software
-                  solutions that are suitable for all businesses and can run
-                  easily on multiple platforms. We are dedicated to delivering
-                  all your end-to-end custom software projects on time, budget,
-                  and scope.
+                  {t("PARA2")}
                 </Text>
-                <Button mt={4}>Get Started</Button>
+                <Button mt={4}>{t("Get Started")}</Button>
               </div>
             </Section>
           </Col>
@@ -102,5 +99,10 @@ const Content1 = () => (
     </div>
   </>
 );
+  };
+
+  Content1.propTypes = {
+    t: PropTypes.func.isRequired,
+  };
 
 export default Content1;
