@@ -102,7 +102,7 @@ const Hero = () => {
                   {t("Mobile Application Development")}
                 </Title>
                 <Text style={{ color: "white" }} mb={4}>
-                {("PARA20")}
+                  {t("PARA20")}
                 </Text>
                 {/* <form action="/">
                   <div className="position-relative">
