@@ -91,33 +91,17 @@ const Feature = () => {
           <Row className="">
             <Col md="6" xl="4" className="mb-5">
               <FeatureCard color="secondary" title={t("Validating Your Idea")}>
-                {""}
-                Suppose you have an idea of a great web or mobile application.
-                In that case, our team of professional developers will help you
-                in the validation of your idea to check if it is possible to
-                implement it in real-world scenarios. This is the main step for
-                making a great application, and it is the most difficult one.
-                Our team of experienced developers will take your requirements
-                and will purpose a customized solution based on your
-                requirements.
+                {t("turnYouridea4")}
               </FeatureCard>
             </Col>
             <Col md="6" xl="4" className="mb-5">
               <FeatureCard color="primary" title="Making It Happen">
-                Not only do we help you in validating your idea for a great
-                application, but we also make it happen for you. We take care of
-                all the application design, programming, database design, and
-                any other thing that requires a professional developer's
-                services to turn your idea into a real-time working application.
+                {t("turnYouridea5")}
               </FeatureCard>
             </Col>
             <Col md="6" xl="4" className="mb-5">
               <FeatureCard color="warning" title="Support">
-                Unlike other agencies, we are not limited to just developing web
-                applications. We also provide long-term support and maintenance
-                services to our customers. We have a dedicated team to support
-                our customers, which makes us best among all the apps and
-                software development companies.
+                {t("turnYouridea6")}
               </FeatureCard>
             </Col>
           </Row>

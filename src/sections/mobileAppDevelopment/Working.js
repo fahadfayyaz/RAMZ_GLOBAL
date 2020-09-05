@@ -5,7 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Box, Text } from "../../components/Core";
 
 import imgPhone from "../../assets/image/png/img.png";
-
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 const SectionStyled = styled(Section)``;
 
 const WidgetContainer = styled(Box)`
@@ -49,6 +50,8 @@ const Widget = ({ num = 1, title = "", children = "", ...rest }) => {
 };
 
 const Working = () => {
+  const { t } = useTranslation(["common"]);
+
   return (
     <>
       {/* <!-- Content1 section --> */}
@@ -68,52 +71,35 @@ const Working = () => {
             <Col lg="6" md={9} className="order-lg-1">
               <div>
                 <Title>
-                  Our Working Procedure{" "}
+                  {t("Our Working Procedure")}
                   {/* <br className="d-none d-sm-block d-md-none d-xl-block" /> all
                    */}
                 </Title>
-                <Text>
-                  Our working procedure is very smooth and we work
-                  collaboratively with all our clients to ensure that our
-                  customers get their requirements fulfilled in a way they want.
-                  We follow a simple six-step procedure when developing a mobile
-                  application.
-                </Text>
+                <Text>{t("mobile5")}</Text>
                 <WidgetContainer mt={5}>
                   <Widget title="Requirements Gathering" mb={4}>
-                    In the first step, we do meetings with our clients and
-                    gather their requirements that what they actually want to be
-                    developed for their business. We do detailed sessions with
-                    our customers so that we do not miss any specifications.
+                    {t("mobile6")}
                   </Widget>
                   <Widget title="Design" mb={4}>
-                    Based on the requirements gathered in the first step, we
-                    make an elegant and responsive design of mobile applications
-                    for our customers.
+                    {t("mobile7")}
                   </Widget>
 
                   <Widget title="Development" mb={4}>
-                    Once you approve our design, we will forward it to our
-                    professional team of developers to get your design coded
-                    into a real-time mobile application.
+                    {t("mobile8")}
                   </Widget>
 
-                  <Widget title="Testing" mb={4}>
-                    This is the most important step where we test the
-                    application for all its functionality and check whether it
-                    meets our customers’ requirements.
+                  <Widget title={t("Testing")} mb={4}>
+                    {t("mobile9")}
                   </Widget>
 
-                  <Widget title="Deployment" mb={4}>
-                    If the application passes all the testing phases, we help
-                    you deploy it on your desired platforms.
+                  <Widget title={t("Deployment")} mb={4}>
+                    {t(
+                      "If the application passes all the testing phases, we help you deploy it on your desired platforms."
+                    )}
                   </Widget>
 
-                  <Widget title="Maintainance" mb={4}>
-                    Not only do we help our customers to develop their mobile
-                    application but, we also offer them after development
-                    support for the maintenance of their applications and to
-                    ensure that their apps keep running without any problems.
+                  <Widget title={t("Maintainance")} mb={4}>
+                    {t("mobile10")}
                   </Widget>
                 </WidgetContainer>
               </div>
@@ -123,6 +109,10 @@ const Working = () => {
       </SectionStyled>
     </>
   );
+};
+
+Working.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Working;

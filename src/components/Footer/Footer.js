@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { Title, Box } from "../Core";
 import Logo from "../Logo";
-
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 const TitleStyled = styled(Title)`
   font-size: 16px;
   font-weight: 700;
@@ -65,6 +66,7 @@ const CopyRightArea = styled.div`
 `;
 
 const Footer = ({ isDark = true }) => {
+  const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Footer section --> */}
@@ -87,22 +89,22 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        About
+                        {t("About")}
                       </TitleStyled>
                       <UlStyled color={isDark ? "lightShade" : "darkShade"}>
                         <li>
                           <a href="/#" target="_blank">
-                            Our mission
+                            {t("Our mission")}
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            Our story
+                            {t("Our story")}
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            Team Members
+                            {t("Team Members")}
                           </a>
                         </li>
                       </UlStyled>
@@ -114,22 +116,22 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        Learn
+                        {t("Learn")}
                       </TitleStyled>
                       <UlStyled color={isDark ? "lightShade" : "darkShade"}>
                         <li>
                           <a href="/#" target="_blank">
-                            Tutorials
+                            {t("Tutorials")}
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            How it works
+                            {t("How it works")}
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            F.A.Q
+                            {t("F.A.Q")}
                           </a>
                         </li>
                       </UlStyled>
@@ -141,17 +143,17 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        Stories
+                        {t("Stories")}
                       </TitleStyled>
                       <UlStyled color={isDark ? "lightShade" : "darkShade"}>
                         <li>
                           <a href="/#" target="_blank">
-                            Blog
+                            {t("Blog")}
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            Tech stories
+                            {t("Tech stories ")}
                           </a>
                         </li>
                       </UlStyled>
@@ -163,22 +165,22 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        Hire
+                        {t("Hire")}
                       </TitleStyled>
                       <UlStyled color={isDark ? "lightShade" : "darkShade"}>
                         <li>
                           <a href="/#" target="_blank">
-                            Career
+                            {t("Career")}
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            Freelancers
+                            {t("Freelancers")}
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            Trainee
+                            {t("Trainee")}
                           </a>
                         </li>
                       </UlStyled>
@@ -218,6 +220,9 @@ const Footer = ({ isDark = true }) => {
       </Box>
     </>
   );
+};
+Footer.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Footer;
