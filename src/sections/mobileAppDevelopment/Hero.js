@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 import {
   Title,
@@ -55,6 +57,7 @@ const ImageBottom = styled(Box)`
 `;
 
 const Hero = () => {
+  const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -96,13 +99,10 @@ const Hero = () => {
             >
               <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                 <Title style={{ color: "white" }} variant="hero">
-                  Mobile Application Development
+                  {t("Mobile Application Development")}
                 </Title>
                 <Text style={{ color: "white" }} mb={4}>
-                  Are you looking for effective mobile application development
-                  services for your business? Do you want to put life into your
-                  mobile application idea? If yes, then you are in the right
-                  place.
+                {("PARA20")}
                 </Text>
                 {/* <form action="/">
                   <div className="position-relative">
@@ -139,6 +139,10 @@ const Hero = () => {
       </SectionStyled>
     </>
   );
+};
+
+Hero.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Hero;

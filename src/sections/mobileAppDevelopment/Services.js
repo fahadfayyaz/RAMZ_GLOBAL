@@ -4,7 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Box, Text, Title } from "../../components/Core";
 import styled, { keyframes } from "styled-components";
-
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 const animRippleOut = keyframes`
     100% {
       top: -12px;
@@ -76,72 +77,58 @@ const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
   </Box>
 );
 
-const Feature = () => (
+const Feature = () => {
+  const { t } = useTranslation(["common"]);
+return (
+  
   <>
     <Section pt="0!important">
       <Container>
         <div className="text-center">
           <Title color="dark" style={{ fontSize: "4em", marginTop: "60px" }}>
-            What Kind Of Mobile Application <br></br> Services Do We Offer?
+           {t("What Kind Of Mobile Application")} <br></br> {t("Services Do We Offer?")}
           </Title>
         </div>
         <Row className="">
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard
               color="secondary"
-              title="Android Application Developement"
+              title={t("Android Application Developement")}
             >
-              We have a team of full-stack android application developers
-              dedicated to provide you high-end customized android application
-              development services. We can help you to turn your vision, needs,
-              and requirements of an app into reality. Get your apps smoothly
-              running across multiple android platforms with high efficiency.
+             {t("PARA22")}
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="primary" title="IOS APP Development">
-              Apple is a well-known brand for mobile devices like iPhones,
-              iPads, Apple Watches, etc. They are based on the IOS operating
-              system. Therefore, we are offering powerful and reliable Ios
-              application development services to make you mobile applications
-              running on various apple devices.
+            <FeatureCard color="primary" title={t("IOS APP Development")}>
+            {t("PARA23")}
+              
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="warning" title="Hybrid App Developement">
-              Hybrid mobile applications are on the eye of developers and
-              businesses around the world. Hybrid apps are known to support
-              multiple platforms and can enhance your audience reach across
-              multiple platforms. We have a dedicated team to develop
-              cross-platform applications that are efficient and run faster on
-              multiple platforms.
+            <FeatureCard color="warning" title={t("Hybrid App Developement")}>
+            {t("PARA24")}
+             
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="success" title="React Native App Development">
-              We are specialized in developing react native mobile applications.
-              We provide you smooth and easy cross-platform mobile application
-              development using cutting-edge technology to ensure that your apps
-              run smoothly on both android and Ios platforms.
+            <FeatureCard color="success" title={t("React Native App Development")}>
+            {t("PARA25")}
+             
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard
               color="dark"
-              title="Custom Mobile Application Development"
+              title={t("Custom Mobile Application Development")}
             >
-              If you are an individual having an amazing idea of a mobile
-              application or you are business looking for a mobile application
-              with tailor-made requirements to meet your business needs. Our
-              customized mobile application development solutions serve various
-              industries. We can fulfill all your needs and can develop a
-              stunning mobile application for you.
+              {t("PARA26")}
+             
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="ash" title="Smart salary">
-              Many of us are able to work from home, a café, or a park whenever
-              we want. Yay freedom!
+            <FeatureCard color="ash" title={t("Smart salary")}>
+            {t("PARA27")}
+             
             </FeatureCard>
           </Col>
         </Row>
@@ -149,5 +136,10 @@ const Feature = () => (
     </Section>
   </>
 );
+} ;
+
+Feature.propTypes = {
+  t: PropTypes.func.isRequired,
+};
 
 export default Feature;

@@ -12,7 +12,7 @@ const MobileAppDevelopment = () => {
     <>
       <Header />
       <PageWrapper>
-        <Hero />
+        <Hero  />
         <Content />
         <Services />
         <Special />

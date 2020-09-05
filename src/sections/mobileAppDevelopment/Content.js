@@ -4,6 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Text, Box, Span } from "../../components/Core";
 import { device } from "../../utils";
+import PropTypes from "prop-types";
+import { useTranslation } from "../../i18n";
 
 const SectionStyled = styled(Section)``;
 
@@ -52,6 +54,7 @@ const ContentWidget = styled(Box)`
 `;
 
 const ContentCard = ({ children = "" }) => {
+  
   return (
     <ContentWidget>
       <div className="d-flex align-items-center">
@@ -66,6 +69,7 @@ const ContentCard = ({ children = "" }) => {
 };
 
 const Content = () => {
+  const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Content section --> */}
@@ -74,28 +78,11 @@ const Content = () => {
           <Row className="justify-content-center mb-5">
             <Col lg="10">
               <div className="text-center">
-                <Title color="light">YOU WANT A PARTNER NOT A DEVELOPER</Title>
+                <Title color="light">{t("YOU WANT A PARTNER NOT A DEVELOPER")}</Title>
               </div>
 
               <Text mb={4} color="light" textAlign="Center" opacity={0.7}>
-                At Ramz global, we build powerful and impressive Ios and android
-                applications to solve your everyday business problems. Our apps
-                comply with all industry standards. They are built with an
-                innovative approach and result-oriented designs to guarantee
-                higher conversions, remarkable security, and an incredible
-                experience on the user’s end. If you are looking for a mobile
-                application for your business or you want to turn your mobile
-                application idea into reality, then Ramz Global can make it
-                happen for you. Having years of experience in this field and
-                working with hundreds of businesses worldwide, we consider
-                ourselves highly qualified to handle all your mobile application
-                needs. We have a highly skilled and diverse mobile application
-                development team that can develop and launch your mobile
-                application across different platforms. If you need a
-                professional mobile application developer, don’t waste your time
-                looking for local agencies. Get in touch with Ramz Global and
-                watch your great idea of mobile application turning into
-                reality.
+               {t("PARA21")}
               </Text>
             </Col>
           </Row>
@@ -103,6 +90,9 @@ const Content = () => {
       </SectionStyled>
     </>
   );
+};
+Content.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default Content;
