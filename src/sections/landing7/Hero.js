@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "../../i18n";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 
@@ -51,7 +52,10 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  <Button>Get In Touch</Button>
+                  {" "}
+                  <Link to="/pages/contact-1">
+                    <Button>Get In Touch</Button>
+                  </Link>
                 </Box>
               </Box>
             </Col>

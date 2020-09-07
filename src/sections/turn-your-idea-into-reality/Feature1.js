@@ -68,9 +68,7 @@ const Feature = () => {
               <Box>
                 <Title color="light">{t("What Services Do We Offer?")} </Title>
                 <Text color="light" opacity={0.7}>
-                  {t(
-                    "We have a team of full-stack developers that are highly skilled and well-experienced."
-                  )}
+                  {t("a")}
                   <br className="d-none d-sm-block d-md-none d-xl-block" />
                   <br className="d-none d-sm-block d-md-none d-xl-block" />
                   {t("turnYouridea2")}

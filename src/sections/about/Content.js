@@ -23,7 +23,7 @@ const Content = () => {
       <Section>
         <Container>
           <Row className="justify-content-center pb-4">
-            <Title variant="hero">{t("What do We do?")}</Title>
+            <Title variant="hero">{t("What Do We Do?")}</Title>
 
             <Col lg="12" className="pl-lg-12">
               <Text>{t("about1")}</Text>

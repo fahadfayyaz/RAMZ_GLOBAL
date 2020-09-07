@@ -89,8 +89,8 @@ const Hero = () => {
               </div> */}
             </Col>
             <Col
-              md="9"
-              lg="7"
+              md="12"
+              lg="12"
               className="order-lg-1"
               data-aos="fade-right"
               data-aos-duration="750"

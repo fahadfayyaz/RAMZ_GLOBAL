@@ -65,32 +65,10 @@ const Hero = () => {
         <div className="pt-5"></div>
         <Container>
           <Row>
-            <Col lg="5" className="order-lg-2">
-              {/* <div className="position-relative w-100 h-100">
-                <ImageTop
-                  bg="light"
-                  data-aos="zoom-out"
-                  data-aos-duration="750"
-                  data-aos-once="true"
-                  data-aos-delay="1000"
-                  className="d-none d-lg-block"
-                >
-                  <img src={imgL2HeroOval1} alt="" className="img-fluid" />
-                </ImageTop>
-                <ImageBottom
-                  data-aos="zoom-out"
-                  data-aos-duration="750"
-                  data-aos-once="true"
-                  data-aos-delay="1000"
-                  className="d-none d-lg-block"
-                >
-                  <img src={imgL2HeroOval2} alt="" className="img-fluid" />
-                </ImageBottom>
-              </div> */}
-            </Col>
+            <Col lg="5" className="order-lg-2"></Col>
             <Col
-              md="9"
-              lg="7"
+              md="12"
+              lg="12"
               className="order-lg-1"
               data-aos="fade-right"
               data-aos-duration="750"
@@ -104,34 +82,6 @@ const Hero = () => {
                 <Text style={{ color: "white" }} mb={4}>
                   {t("turnYouridea3")}
                 </Text>
-                {/* <form action="/">
-                  <div className="position-relative">
-                    <InputGroup
-                      icon={<i className="icon icon-email-84" />}
-                      placeholder="Email address"
-                      border="none"
-                      css={`
-                        @media${device.sm} {
-                          padding-right: 210px;
-                        }
-                      `}
-                    />
-                    <Button
-                      css={`
-                        margin-top: 1rem;
-                        @media${device.sm} {
-                          margin-top: 0;
-                          position: absolute;
-                          top: 50%;
-                          right: 5px;
-                          transform: translateY(-50%);
-                        }
-                      `}
-                    >
-                      Get Started
-                    </Button>
-                  </div>
-                </form> */}
               </Box>
             </Col>
           </Row>
