@@ -38,6 +38,7 @@ export const menuItems = [
       { name: "contact-3", label: "Contact 03" },
     ],
   },
+  { name: "faq", label: "FAQ" },
   // {
   //   name: "pages",
   //   label: "Pages",

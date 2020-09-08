@@ -30,7 +30,7 @@ const Hero = () => {
                   data-aos-delay="700"
                 >
                   {t(
-                    "Do you want to put life into your mobile application idea?"
+                    "We Innovate and turn your ideas into real-world applications. To fulfill your personal and business needs."
                   )}
                 </Text>
                 <Title
@@ -42,7 +42,8 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1000"
                 >
-                  If yes, then you are in the right place.
+                  We Are A Premium Apps Development Company With International
+                  Reach
                   <br className="d-none d-lg-block" />
                 </Title>
                 <Box
