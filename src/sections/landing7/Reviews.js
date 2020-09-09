@@ -152,7 +152,7 @@ const Reviews = () => {
               <Row className="justify-content-center mb-5">
                 <Col lg="10">
                   <div className="text-center">
-                    <Title color="light">
+                    <Title color="#F2E529">
                       What Makes Us Different From Others?
                     </Title>
                   </div>

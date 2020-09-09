@@ -53,12 +53,22 @@ const ContentCard = ({
 
 const mission = () => (
   <>
-    <Section bg="#f7f7fb">
+    <Section bg="#F2F2F2">
       <Container>
         <Row className="justify-content-center">
-          <Col lg="9">
-            <Box className="text-center" mb={[4, 5]}>
-              <Title>Not Sure What Are You Looking For?</Title>
+          <Col bg="#F2F2F2" lg="4"></Col>
+
+          <Col lg="8">
+            <Box className="text-left" mb={[4, 5]}>
+              <Title style={{ color: "#262524" }}>
+                Not Sure What Are You Looking For?
+              </Title>
+              <Text color="dark" className="text-left">
+                If you are not sure that what is suitable for you or what do you
+                actually want then get in touch with our experts. We will assess
+                your requirements and will suggest a suitable solution for your
+                business needs.
+              </Text>
             </Box>
           </Col>
         </Row>

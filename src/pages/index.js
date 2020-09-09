@@ -16,14 +16,13 @@ const LandingPage7 = () => {
     <>
       <PageWrapper headerDark footerDark>
         <Hero />
-        <Fact />
-        <Feature2 />
+        <Mission />
+        {/* <Feature2 /> */}
         <Feature />
 
         <Working />
 
         <CaseStudies />
-        <Mission />
 
         <Reviews />
         {/* <Feature2 /> */}

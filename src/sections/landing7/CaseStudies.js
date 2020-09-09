@@ -156,12 +156,12 @@ const CaseStudies = () => {
   return (
     <>
       {/* <!-- Content section --> */}
-      <Box bg="dark" style={{ paddingTop: "30px" }}>
+      <Box bg="#262524" style={{ paddingTop: "30px" }}>
         <Container>
           <Row className="justify-content-center">
             <Col lg="9">
               <Box className="text-center" mb={[4, 5]}>
-                <Title>Not Sure What Are You Looking For?</Title>
+                <Title style={{ color: "#F2F2F2" }}>Things We’ve Built</Title>
               </Box>
             </Col>
           </Row>
@@ -206,15 +206,7 @@ const CaseStudies = () => {
               </CaseCard>
             </Col>
           </Row>
-          <Box className="text-center" pt={[4, null, null, null, 5]}>
-            <Button
-              style={{ marginBottom: "130px" }}
-              variant="outline"
-              color="light"
-            >
-              Things We’ve Built
-            </Button>
-          </Box>
+          <Box className="text-center" pt={[4, null, null, null, 5]}></Box>
         </Container>
       </Box>
     </>

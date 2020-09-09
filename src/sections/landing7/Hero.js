@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       {/* <!-- Hero Area --> */}
-      <Section bg="dark">
+      <Section bg="#595857">
         <div className="pt-5"></div>
         <Container
           className="position-relative"

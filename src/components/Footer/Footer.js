@@ -87,9 +87,15 @@ const Footer = ({ isDark = true }) => {
                       marginTop: "50px",
                     }}
                   >
-                    Pakistan
+                    Head Office
                   </Title>
-                  <Text style={{ fontSize: "1em", color: "white" }}>
+                  <Text
+                    style={{
+                      fontSize: "1em",
+                      color: "white",
+                      marginTop: "-30px",
+                    }}
+                  >
                     Address: 4275 Village Center Ct. Mississauga, Ontario L4Z1V3
                   </Text>
                   <Text style={{ fontSize: "1em", color: "white" }}>
@@ -102,7 +108,13 @@ const Footer = ({ isDark = true }) => {
                   <Title style={{ fontSize: "1.8em", color: "white" }}>
                     Germany
                   </Title>
-                  <Text style={{ fontSize: "1em", color: "white" }}>
+                  <Text
+                    style={{
+                      fontSize: "1em",
+                      color: "white",
+                      marginTop: "-30px",
+                    }}
+                  >
                     Address: 4275 Village Center Ct. Mississauga, Ontario L4Z1V3
                   </Text>
                   <Text style={{ fontSize: "1em", color: "white" }}>
