@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       {/* <!-- Hero Area --> */}
-      <Section bg="dark">
+      <Section bg="#595857">
         <div className="pt-5"></div>
         <Container
           className="position-relative"
@@ -20,7 +20,7 @@ const Hero = () => {
           `}
         >
           <Row>
-            <Col md="11" lg="10" xl="9">
+            <Col xs="12">
               <Box py={4}>
                 <Text
                   color="light"
