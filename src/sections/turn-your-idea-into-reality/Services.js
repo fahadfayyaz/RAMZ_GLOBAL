@@ -95,12 +95,12 @@ const Feature = () => {
               </FeatureCard>
             </Col>
             <Col md="6" xl="4" className="mb-5">
-              <FeatureCard color="primary" title="Making It Happen">
+              <FeatureCard color="primary" title={t("Making It Happen")}>
                 {t("turnYouridea5")}
               </FeatureCard>
             </Col>
             <Col md="6" xl="4" className="mb-5">
-              <FeatureCard color="warning" title="Support">
+              <FeatureCard color="warning" title={t("Support")}>
                 {t("turnYouridea6")}
               </FeatureCard>
             </Col>

@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-import { Title, Box } from "../Core";
+import { Title, Box, Section, Text } from "../Core";
 import Logo from "../Logo";
 import PropTypes from "prop-types";
 import { useTranslation } from "../../i18n";
+// import imgOval from "../../assets/image/png/l1-cta-oval.png";
+// import svgCurve from "../../assets/image/svg/l1-curve-cta.svg";
+
 const TitleStyled = styled(Title)`
   font-size: 16px;
   font-weight: 700;
@@ -77,6 +80,61 @@ const Footer = ({ isDark = true }) => {
               padding: 80px 0 60px;
             `}
           >
+            <Row className="justify-content-center text-center">
+              <Col lg="6">
+                <Box mb={5} className="text-center">
+                  <Title color="light">REACH US AT</Title>
+                </Box>
+              </Col>
+            </Row>
+            <Row>
+              <Col md="4" xl="4" lg="4" className="mb-5">
+                <Box mb={5} className="text-center">
+                  <Title style={{ fontSize: "3em", color: "white" }}>
+                    Pakistan
+                  </Title>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    4275 Village Center Ct. Mississauga, Ontario L4Z1V3
+                  </Text>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    info@mmcgbl.ca
+                  </Text>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    +1-647-993-5099
+                  </Text>
+                </Box>
+              </Col>
+              <Col md="4" xl="4" lg="4" className="mb-5">
+                <Box mb={5} className="text-center">
+                  <Title style={{ fontSize: "3em", color: "white" }}>
+                    Germany
+                  </Title>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    4275 Village Center Ct. Mississauga, Ontario L4Z1V3
+                  </Text>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    info@mmcgbl.ca
+                  </Text>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    +1-647-993-5099
+                  </Text>
+                </Box>
+              </Col>
+              <Col md="4" xl="4" lg="4" className="mb-5">
+                <Box mb={5} className="text-center">
+                  <Title style={{ fontSize: "3em", color: "white" }}>US</Title>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    4275 Village Center Ct. Mississauga, Ontario L4Z1V3
+                  </Text>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    info@mmcgbl.ca
+                  </Text>
+                  <Text style={{ fontSize: "1em", color: "white" }}>
+                    +1-647-993-5099
+                  </Text>
+                </Box>
+              </Col>
+            </Row>
             <Row className="justify-content-center">
               <Col lg="2" md="4">
                 <Logo white={isDark} />

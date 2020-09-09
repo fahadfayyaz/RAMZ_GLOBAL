@@ -21,6 +21,136 @@ const NavStyled = styled(Nav)`
   }
 `;
 
+const Databank = [
+  {
+    label: "general",
+    questions: [
+      {
+        q: "Can I use Omega for my clients?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Do I get free updates?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Will you provide support?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+    ],
+  },
+
+  {
+    label: "accounts",
+    questions: [
+      {
+        q: "Can I use Omega for my clients?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Do I get free updates?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Will you provide support?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+    ],
+  },
+
+  {
+    label: "sales",
+    questions: [
+      {
+        q: "Can I use Omega for my clients?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Do I get free updates?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Will you provide support?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+    ],
+  },
+
+  {
+    label: "support",
+    questions: [
+      {
+        q: "Can I use Omega for my clients?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Do I get free updates?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Will you provide support?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+    ],
+  },
+
+  {
+    label: "license",
+    questions: [
+      {
+        q: "Can I use Omega for my clients?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Do I get free updates?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+      {
+        q: "Will you provide support?",
+        a:
+          "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+      },
+    ],
+  },
+];
+
+// const Questions = [
+//   {
+
+//     topic: "general",
+//     questions: [
+//       "",
+//       "",
+//       "",
+//     ],
+//     answers: [
+//       "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.",
+//       "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding.",
+//       "Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding.",
+//     ],
+//   },
+
+//   {
+//     topic: "accounts",
+//     questions: ["Does it work with WordPress?", "What is your Privacy Policy?"],
+//     answers: [],
+//   },
+// ];
+
 const Faq = () => {
   return (
     <>
@@ -44,20 +174,20 @@ const Faq = () => {
               <Row>
                 <Col md="4" className="mb-5 mb-md-0">
                   <NavStyled className="flex-column mr-md-5">
-                    <Nav.Link eventKey="general">General</Nav.Link>
-                    <Nav.Link eventKey="accounts">Accounts</Nav.Link>
-                    <Nav.Link eventKey="sales">Sales</Nav.Link>
-                    <Nav.Link eventKey="support">Support</Nav.Link>
-                    <Nav.Link eventKey="license">License</Nav.Link>
+                    <Nav.Link eventKey={Databank[0].label}>General</Nav.Link>
+                    <Nav.Link eventKey={Databank[1].label}>Accounts</Nav.Link>
+                    <Nav.Link eventKey={Databank[2].label}>Sales</Nav.Link>
+                    <Nav.Link eventKey={Databank[3].label}>Support</Nav.Link>
+                    <Nav.Link eventKey={Databank[4].label}>License</Nav.Link>
                   </NavStyled>
                 </Col>
                 <Col md="8">
                   <Tab.Content>
-                    <Tab.Pane eventKey="general">
+                    <Tab.Pane eventKey={Databank[0].label}>
                       <Box>
                         <Box mb={4}>
                           <Title variant="card" mb={3} fontSize="24px">
-                            Can I use Omega for my clients?
+                            {Databank[0].questions[0].q}
                           </Title>
                           <Text variant="small">
                             Create custom landing pages with Omega that converts
@@ -69,7 +199,7 @@ const Faq = () => {
                         </Box>
                         <Box mb={4}>
                           <Title variant="card" mb={3} fontSize="24px">
-                            Do I get free updates?
+                            {Databank[0].questions[1].q}
                           </Title>
                           <Text variant="small">
                             Create custom landing pages with Omega that converts
@@ -80,7 +210,7 @@ const Faq = () => {
                         </Box>
                         <Box mb={4}>
                           <Title variant="card" mb={3} fontSize="24px">
-                            Will you provide support?
+                            {Databank[0].questions[2].q}
                           </Title>
                           <Text variant="small">
                             Create custom landing pages with Omega that converts

@@ -27,7 +27,6 @@
   "turnYouridea1": "Wenn Sie ein Geschäftsinhaber sind und Ihre Geschäftsprozesse vereinfachen möchten, ist es eine einfache Aufgabe, eine Idee für eine mobile Anwendung, eine Webanwendung oder eine Desktop-Anwendung zu entwickeln. Die Umsetzung dieser Idee führt jedoch dazu, dass diese Idee in Echtzeit umgesetzt wird Die Anwendung ist eine ziemlich schwierige Aufgabe. Möglicherweise suchen Sie einen Entwickler, der Ihnen hilft, Ihre Vision für diesen Zweck in die Realität umzusetzen. Dies tun wir bei Ramz Global.",
   "turnYouridea2": "Wir bieten unseren Kunden folgende Dienstleistungen an. Wenn Sie maßgeschneiderte Softwareentwicklungs- oder Web- oder Android-Anwendungsentwicklungsdienste benötigen, wenden Sie sich bitte an Ramz Global. Wir helfen Ihnen nicht nur bei der Verfeinerung Ihrer Ideen und Anforderungen, sondern stellen auch sicher, dass Sie die besten und erschwinglichsten Lösungen erhalten, die den Marktstandards entsprechen.",
   "What Services Do We Offer?": "Welche Dienstleistungen bieten wir an?",
-  "We have a team of full-stack developers that are highly skilled and well-experienced.": "Wir haben ein Team von Full-Stack-Entwicklern, die hochqualifiziert und erfahren sind.",
   "Android Application Development": "Android-Anwendungsentwicklung",
   "Desktop Application Development": "Entwicklung von Desktop-Anwendungen",
   "100% Customer Satisfaction": "100% Kundenzufriedenheit",
@@ -149,5 +148,9 @@
   "Deployment": "Einsatz",
   "If the application passes all the testing phases, we help you deploy it on your desired platforms.": "Wenn die Anwendung alle Testphasen bestanden hat, helfen wir Ihnen, sie auf Ihren gewünschten Plattformen bereitzustellen.",
   "Maintainance": "Wartung",
-  "mobile10": "Wir helfen unseren Kunden nicht nur bei der Entwicklung ihrer mobilen Anwendung, sondern bieten ihnen auch Unterstützung nach der Entwicklung für die Wartung ihrer Anwendungen und stellen sicher, dass ihre Apps problemlos weiterlaufen."
+  "mobile10": "Wir helfen unseren Kunden nicht nur bei der Entwicklung ihrer mobilen Anwendung, sondern bieten ihnen auch Unterstützung nach der Entwicklung für die Wartung ihrer Anwendungen und stellen sicher, dass ihre Apps problemlos weiterlaufen.",
+  "Making It Happen": "Es passieren lassen",
+  "Support": "Unterstützung",
+
+  "a": "Wir haben ein Team von Full-Stack-Entwicklern, die hochqualifiziert und erfahren sind."
 }

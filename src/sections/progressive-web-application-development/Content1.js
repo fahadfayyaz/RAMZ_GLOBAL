@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgContentMobile from "../../assets/image/png/content-img1--mobile.webp";
+// import imgContentMobile from "../../assets/image/png/content-img1--mobile.webp";
 import PropTypes from "prop-types";
 import { useTranslation } from "../../i18n";
 const ShapeCard = styled(Box)`
@@ -22,16 +22,14 @@ const ShapeCard = styled(Box)`
     left: 0%;
   }
 `;
-
+const SectionStyled = styled(Section)``;
 const Content1 = () => {
   const { t } = useTranslation(["common"]);
   return (
     <>
       {/* <!-- Content section 1 --> */}
-      <Section>
-        <Container>
-          <Row className="align-items-center">
-            <Col md="12" lg="6" className="order-lg-2">
+
+      {/* <Col md="12" lg="6" className="order-lg-2">
               <div className="position-relative pl-lg-5">
                 <div
                   className="pl-lg-4 text-center text-lg-right"
@@ -42,8 +40,8 @@ const Content1 = () => {
                   <img src={imgContentMobile} alt="" className="img-fluid" />
                 </div>
               </div>
-            </Col>
-            <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
+            </Col> */}
+      {/* <Col lg="12" className="order-lg-1 mt-5 mt-lg-0">
               <div
                 data-aos="fade-right"
                 data-aos-duration="750"
@@ -55,13 +53,32 @@ const Content1 = () => {
                       "Why Should You Prefer Progressive Web Applications To Fulfil Your Business Needs?"
                     )}
                   </Title>
-                  <Text mb={4}>{t("progressive")}</Text>
+                  <Text className="justify-content-center" mb={4}>
+                    {t("progressive")}
+                  </Text>
                 </Box>
               </div>
+            </Col> */}
+
+      <SectionStyled bg="dark">
+        <Container>
+          <Row className="justify-content-center mb-5">
+            <Col lg="10">
+              <div className="text-center">
+                <Title color="light">
+                  {t(
+                    "Why Should You Prefer Progressive Web Applications To Fulfil Your Business Needs?"
+                  )}
+                </Title>
+              </div>
+
+              <Text mb={4} color="light" textAlign="Center" opacity={0.7}>
+                {t("progressive")}
+              </Text>
             </Col>
           </Row>
         </Container>
-      </Section>
+      </SectionStyled>
     </>
   );
 };

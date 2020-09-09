@@ -77,14 +77,14 @@ const Working = () => {
                 </Title>
                 <Text>{t("mobile5")}</Text>
                 <WidgetContainer mt={5}>
-                  <Widget title="Requirements Gathering" mb={4}>
+                  <Widget title={t("Requirements Gathering")} mb={4}>
                     {t("mobile6")}
                   </Widget>
-                  <Widget title="Design" mb={4}>
+                  <Widget title={t("Design")} mb={4}>
                     {t("mobile7")}
                   </Widget>
 
-                  <Widget title="Development" mb={4}>
+                  <Widget title={t("Development")} mb={4}>
                     {t("mobile8")}
                   </Widget>
 

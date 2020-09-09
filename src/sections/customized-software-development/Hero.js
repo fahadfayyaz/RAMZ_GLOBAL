@@ -89,8 +89,8 @@ const Hero = () => {
               </div> */}
             </Col>
             <Col
-              md="9"
-              lg="7"
+              md="12"
+              lg="12"
               className="order-lg-1"
               data-aos="fade-right"
               data-aos-duration="750"
@@ -99,10 +99,10 @@ const Hero = () => {
             >
               <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                 <Title style={{ color: "white" }} variant="hero">
-                  {t('Customized Software Development - Ramz Global')}
+                  {t("Customized Software Development - Ramz Global")}
                 </Title>
                 <Text style={{ color: "white" }} mb={4}>
-                 {t('PARA1')}
+                  {t("PARA1")}
                 </Text>
                 {/* <form action="/">
                   <div className="position-relative">
