@@ -67,7 +67,7 @@ const Feature2 = () => (
         <Row className="justify-content-center">
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
-              <Title>Our Services</Title>
+              <Title>Technologies That We Use To Accomplish Your Needs</Title>
             </Box>
           </Col>
         </Row>

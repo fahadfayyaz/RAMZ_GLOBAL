@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Box, Text } from "../../components/Core";
 
 import imgPhone from "../../assets/image/png/l7-mobile.png";
+import { flex } from "styled-system";
 
 const SectionStyled = styled(Section)``;
 
@@ -38,8 +39,8 @@ const WidgetStyled = styled(Box)`
 
 const Widget = ({ num = 1, title = "", children = "", ...rest }) => {
   return (
-    <WidgetStyled {...rest}>
-      <Title variant="card" mb={2}>
+    <WidgetStyled {...rest} style={{ display: "flex" }}>
+      <Title variant="card" mb={2} style={{ margin: "10px 0px" }}>
         {title}
       </Title>
       <Text variant="small">{children}</Text>
@@ -67,53 +68,34 @@ const Working = () => {
             <Col lg="6" md={9} className="order-lg-1">
               <div>
                 <Title>
-                  Our Working Procedure{" "}
+                  Industries That We’ve Served{" "}
                   {/* <br className="d-none d-sm-block d-md-none d-xl-block" /> all
                    */}
                 </Title>
                 <Text>
-                  Our working procedure is very smooth and we work
-                  collaboratively with all our clients to ensure that our
-                  customers get their requirements fulfilled in a way they want.
-                  We follow a simple six-step procedure when developing a mobile
-                  application.
+                  In the past years, we have worked with thousands of businesses
+                  and helped them with all their software solutions. We have
+                  severed hundreds of industries and provided them
+                  highly-efficient solutions for their businesses.
                 </Text>
                 <WidgetContainer mt={5}>
-                  <Widget title="Requirements Gathering" mb={4}>
-                    In the first step, we do meetings with our clients and
-                    gather their requirements that what they actually want to be
-                    developed for their business. We do detailed sessions with
-                    our customers so that we do not miss any specifications.
-                  </Widget>
-                  <Widget title="Design" mb={4}>
-                    Based on the requirements gathered in the first step, we
-                    make an elegant and responsive design of mobile applications
-                    for our customers.
-                  </Widget>
+                  <Widget title="Sports " mb={4}></Widget>
+                  <Widget title="Health and Fitness" mb={4}></Widget>
 
-                  <Widget title="Development" mb={4}>
-                    Once you approve our design, we will forward it to our
-                    professional team of developers to get your design coded
-                    into a real-time mobile application.
-                  </Widget>
+                  <Widget
+                    title="Ecommerce Stores and Applications."
+                    mb={4}
+                  ></Widget>
 
-                  <Widget title="Testing" mb={4}>
-                    This is the most important step where we test the
-                    application for all its functionality and check whether it
-                    meets our customers’ requirements.
-                  </Widget>
+                  <Widget title="Educational Solutions" mb={4}></Widget>
 
-                  <Widget title="Deployment" mb={4}>
-                    If the application passes all the testing phases, we help
-                    you deploy it on your desired platforms.
-                  </Widget>
+                  <Widget title="Delivery Apps" mb={4}></Widget>
 
-                  <Widget title="Maintainance" mb={4}>
-                    Not only do we help our customers to develop their mobile
-                    application but, we also offer them after development
-                    support for the maintenance of their applications and to
-                    ensure that their apps keep running without any problems.
-                  </Widget>
+                  <Widget title="Tracking Apps" mb={4}></Widget>
+
+                  <Widget title="Finance Solutions" mb={4}></Widget>
+                  <Widget title="Enterprise Solutions" mb={4}></Widget>
+                  <Widget title="And many other industries." mb={4}></Widget>
                 </WidgetContainer>
               </div>
             </Col>

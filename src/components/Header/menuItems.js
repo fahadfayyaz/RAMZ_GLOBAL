@@ -30,13 +30,8 @@ export const menuItems = [
   },
 
   {
-    name: "contact",
+    name: "contact-3",
     label: "Contact",
-    items: [
-      { name: "contact-1", label: "Contact 01" },
-      { name: "contact-2", label: "Contact 02" },
-      { name: "contact-3", label: "Contact 03" },
-    ],
   },
   { name: "faq", label: "FAQ" },
   // {
