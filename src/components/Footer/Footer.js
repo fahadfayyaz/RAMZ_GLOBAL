@@ -127,7 +127,7 @@ const Footer = ({ isDark = true }) => {
               </Col>
               <Col lg="6" md="6" className="mt-5 mt-lg-0">
                 <Row style={{ marginTop: "100px" }}>
-                  <Col xs="6" lg="6">
+                  <Col xs="4" lg="4">
                     <div className="mb-5 mb-lg-4">
                       <TitleStyled
                         style={{ fontSize: "1.5em" }}
@@ -138,25 +138,52 @@ const Footer = ({ isDark = true }) => {
                       </TitleStyled>
                       <UlStyled color={isDark ? "lightShade" : "darkShade"}>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="/" target="_blank">
                             Home
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="../../about" target="_blank">
                             About
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="../../contact-3" target="_blank">
                             Contact Us
                           </a>
                         </li>
                       </UlStyled>
                     </div>
                   </Col>
-
-                  <Col xs="6" lg="6">
+                  <Col xs="5" lg="5">
+                    <div className="mb-lg-4">
+                      <TitleStyled
+                        style={{ fontSize: "1.5em" }}
+                        variant="card"
+                        color={isDark ? "light" : "dark"}
+                      >
+                        Our Expertise
+                      </TitleStyled>
+                      <UlStyled color={isDark ? "lightShade" : "darkShade"}>
+                        <li>
+                          <a href="/#" target="_blank">
+                            Mobile App development
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/#" target="_blank">
+                            Progressive web app development
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/#" target="_blank">
+                            Customize web app development
+                          </a>
+                        </li>
+                      </UlStyled>
+                    </div>
+                  </Col>
+                  <Col xs="3" lg="3">
                     <div className="mb-lg-4">
                       <TitleStyled
                         style={{ fontSize: "1.5em" }}
@@ -190,9 +217,10 @@ const Footer = ({ isDark = true }) => {
           </Box>
           <CopyRightArea dark={isDark ? 1 : 0}>
             <Row className="align-items-center">
-              <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>&copy; 2019 UXTheme, All Rights Reserved</p>
-              </Col>
+              <Col
+                sm="6"
+                className="text-sm-left text-center mb-2 mb-sm-0"
+              ></Col>
               <Col sm="6" className="text-sm-right text-center">
                 <ul className="social-icons">
                   <li>

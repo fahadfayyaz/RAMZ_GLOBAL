@@ -108,9 +108,11 @@ const Feature = () => (
                     style={{ marginTop: "30px" }}
                     className="justify-content-center"
                   >
-                    <Button className="text-center" mt={4}>
-                      Learn more
-                    </Button>
+                    <a href="../../mobile-app-development">
+                      <Button className="text-center" mt={4}>
+                        Learn more
+                      </Button>
+                    </a>
                   </Box>
                 </FeatureCard>
               </Col>
@@ -124,9 +126,11 @@ const Feature = () => (
                   could be an all in one solution for your business needs.
                   <br />
                   <Box className="justify-content-center">
-                    <Button className="text-center" mt={4}>
-                      Learn more
-                    </Button>
+                    <a href="../../progressive-web-application-development">
+                      <Button className="text-center" mt={4}>
+                        Learn more
+                      </Button>
+                    </a>
                   </Box>
                 </FeatureCard>
               </Col>
@@ -140,9 +144,11 @@ const Feature = () => (
                   personal and business needs.
                   <br />
                   <Box className="justify-content-center">
-                    <Button className="text-center" mt={4}>
-                      Learn more
-                    </Button>
+                    <a href="../../customized-software-development">
+                      <Button className="text-center" mt={4}>
+                        Learn more
+                      </Button>
+                    </a>
                   </Box>
                 </FeatureCard>
               </Col>
@@ -156,9 +162,12 @@ const Feature = () => (
                   hypothetical ideas.
                   <br />
                   <Box className="justify-content-center">
-                    <Button className="text-center" mt={4}>
-                      Learn more
-                    </Button>
+                    <a href="../../turn-your-idea-into-reality">
+                      {" "}
+                      <Button className="text-center" mt={4}>
+                        Learn more
+                      </Button>
+                    </a>
                   </Box>
                 </FeatureCard>
               </Col>

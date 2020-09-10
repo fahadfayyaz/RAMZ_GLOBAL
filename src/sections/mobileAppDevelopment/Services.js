@@ -79,64 +79,72 @@ const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
 
 const Feature = () => {
   const { t } = useTranslation(["common"]);
-return (
-  
-  <>
-    <Section pt="0!important">
-      <Container>
-        <div className="text-center">
-          <Title color="dark" style={{ fontSize: "4em", marginTop: "60px" }}>
-           {t("What Kind Of Mobile Application")} <br></br> {t("Services Do We Offer?")}
-          </Title>
-        </div>
-        <Row className="">
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard
-              color="secondary"
-              title={t("Android Application Developement")}
-            >
-             {t("PARA22")}
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="primary" title={t("IOS APP Development")}>
-            {t("PARA23")}
-              
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="warning" title={t("Hybrid App Developement")}>
-            {t("PARA24")}
-             
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="success" title={t("React Native App Development")}>
-            {t("PARA25")}
-             
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard
-              color="dark"
-              title={t("Custom Mobile Application Development")}
-            >
-              {t("PARA26")}
-             
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="ash" title={t("Smart salary")}>
-            {t("PARA27")}
-             
-            </FeatureCard>
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-  </>
-);
-} ;
+  return (
+    <>
+      <Section pt="0!important">
+        <Container>
+          <Row className="">
+            <Col md="4" xl="4" className="mb-5">
+              <div>
+                <Title
+                  color="dark"
+                  style={{ fontSize: "4em", marginTop: "60px" }}
+                >
+                  {t("What Kind Of Mobile Application")} <br></br>{" "}
+                  {t("Services Do We Offer?")}
+                </Title>
+              </div>
+            </Col>
+            <Col md="8" xl="8" className="mb-5">
+              <Col
+                md="12"
+                xl="12"
+                className="mb-5"
+                style={{ marginTop: "30px" }}
+              >
+                <FeatureCard
+                  color="secondary"
+                  title={t("Android Application Developement")}
+                >
+                  {t("PARA22")}
+                </FeatureCard>
+              </Col>
+              <Col md="12" xl="12" className="mb-5">
+                <FeatureCard color="primary" title={t("IOS APP Development")}>
+                  {t("PARA23")}
+                </FeatureCard>
+              </Col>
+              <Col md="12" xl="12" className="mb-5">
+                <FeatureCard
+                  color="warning"
+                  title={t("Hybrid App Developement")}
+                >
+                  {t("PARA24")}
+                </FeatureCard>
+              </Col>
+              <Col md="12" xl="12" className="mb-5">
+                <FeatureCard
+                  color="success"
+                  title={t("React Native App Development")}
+                >
+                  {t("PARA25")}
+                </FeatureCard>
+              </Col>
+              <Col md="12" xl="12" className="mb-5">
+                <FeatureCard
+                  color="dark"
+                  title={t("Custom Mobile Application Development")}
+                >
+                  {t("PARA26")}
+                </FeatureCard>
+              </Col>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+    </>
+  );
+};
 
 Feature.propTypes = {
   t: PropTypes.func.isRequired,

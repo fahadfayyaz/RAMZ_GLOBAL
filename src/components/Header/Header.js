@@ -2,16 +2,16 @@ import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { Link } from "../../i18n";
+import Link from "next/link";
 
 import GlobalContext from "../../context/GlobalContext";
 import Offcanvas from "../Offcanvas";
 import { Button } from "../Core";
 import NestedMenu from "../NestedMenu";
+import ChangeLang from "./ChangeLang";
 import { device } from "../../utils";
 import Logo from "../Logo";
 import { menuItems } from "./menuItems";
-import ChangeLang from "./ChangeLang";
 
 const SiteHeader = styled.header`
   padding: 10px 0 10px 0;
@@ -20,12 +20,6 @@ const SiteHeader = styled.header`
   right: 0;
   width: 100%;
   z-index: 999;
-  position: fixed !important;
-  background : white !important;
-  transform: translateY(0%);
-  box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
-  z-index: 9999;
-   
   @media ${device.lg} {
     position: fixed !important;
     transition: 0.4s;
@@ -61,8 +55,8 @@ const Menu = styled.ul`
   > li {
     > .nav-link {
       @media ${device.lg} {
-        color: ${({ theme}) =>
-       theme.colors.dark}!important;
+        color: ${({ dark, theme }) =>
+          dark ? theme.colors.light : theme.colors.darkShade}!important;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -360,7 +354,7 @@ const Header = ({ isDark = false }) => {
                       );
                     }
                   )}
-                  <ChangeLang MenuDropdown={MenuDropdown} isDark={isDark} />
+                  <ChangeLang MenuDropdown={MenuDropdown} isDark={isDark} />;
                 </Menu>
               </div>
             </div>

@@ -11,7 +11,7 @@ import OurValues from "../sections/about/OurValues";
 const About = () => {
   return (
     <>
-      <PageWrapper>
+      <PageWrapper headerDark footerDark>
         <Hero />
         <Content />
         <OurValues />

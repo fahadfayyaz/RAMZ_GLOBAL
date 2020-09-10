@@ -111,64 +111,58 @@ const Special = () => {
 
   return (
     <>
-      <Section bg="dark">
-        <Container>
-          <SectionStyled bg="dark">
-            <Container>
-              <Row className="justify-content-center mb-5">
-                <Col lg="10">
-                  <div className="text-center">
-                    <Title color="light">
-                      {t("What Makes Us Different From Others?")}
-                    </Title>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="align-items-center justify-content-center">
-                <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
-                  <FeatureCard
-                    color="secondary"
-                    iconName="icon-sidebar-2"
-                    title={t("Experienced Team")}
-                  >
-                    {t("mobile1")}
-                  </FeatureCard>
-                </Col>
+      <SectionStyled bg="dark">
+        <Row className="justify-content-center ">
+          <Col lg="8">
+            <div className="text-center">
+              <Title color="light">
+                {t("What Makes Us Different From Others?")}
+              </Title>
+            </div>
+          </Col>
+        </Row>
+        <Row className="align-items-center justify-content-center">
+          <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
+            <FeatureCard
+              color="secondary"
+              iconName="icon-sidebar-2"
+              title={t("Experienced Team")}
+            >
+              {t("mobile1")}
+            </FeatureCard>
+          </Col>
 
-                <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
-                  <FeatureCard
-                    color="primary"
-                    iconName="icon-layout-11"
-                    title={t("Affordable Solutions")}
-                  >
-                    {t("mobile2")}
-                  </FeatureCard>
-                </Col>
+          <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
+            <FeatureCard
+              color="primary"
+              iconName="icon-layout-11"
+              title={t("Affordable Solutions")}
+            >
+              {t("mobile2")}
+            </FeatureCard>
+          </Col>
 
-                <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
-                  <FeatureCard
-                    color="secondary"
-                    icon={<GiCutDiamond color="blue" />}
-                    title={t("100% Customer Satisfaction")}
-                  >
-                    {t("mobile3")}
-                  </FeatureCard>
-                </Col>
+          <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
+            <FeatureCard
+              color="secondary"
+              icon={<GiCutDiamond color="blue" />}
+              title={t("100% Customer Satisfaction")}
+            >
+              {t("mobile3")}
+            </FeatureCard>
+          </Col>
 
-                <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
-                  <FeatureCard
-                    color="primary"
-                    iconName="icon-infinite"
-                    title={t("Domain Expertise")}
-                  >
-                    {t("mobile4")}
-                  </FeatureCard>
-                </Col>
-              </Row>
-            </Container>
-          </SectionStyled>
-        </Container>
-      </Section>
+          <Col sm="6" md="6" lg="6" className="mt-3 mt-lg-5">
+            <FeatureCard
+              color="primary"
+              iconName="icon-infinite"
+              title={t("Domain Expertise")}
+            >
+              {t("mobile4")}
+            </FeatureCard>
+          </Col>
+        </Row>
+      </SectionStyled>
     </>
   );
 };

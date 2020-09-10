@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 // import { Link } from "react-router-dom";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { t } = useTranslation(["common"]);
@@ -53,7 +54,9 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  <Button>Get In Touch</Button>
+                  <a href="../../contact-3">
+                    <Button>Get In Touch</Button>
+                  </a>
                 </Box>
               </Box>
             </Col>
