@@ -22,7 +22,7 @@ const LandingPage7 = () => {
 
         <Working />
 
-        <CaseStudies />
+        {/* <CaseStudies /> */}
 
         <Reviews />
         {/* <Feature2 /> */}

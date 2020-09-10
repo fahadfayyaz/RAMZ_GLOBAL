@@ -5,7 +5,7 @@ const defaultColors = {
   primary: "#f04037",
   secondary: "#5454d4",
   white: "#ffffff",
-  dark: "#595857",
+  dark: "#262524",
   black: "#000000",
   yellow: "#fedc5a",
   ash: "#413e65",
