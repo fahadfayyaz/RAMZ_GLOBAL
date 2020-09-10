@@ -19,6 +19,8 @@ import "../assets/fonts/typography-font/CircularStd-MediumItalic.ttf";
 import "../assets/fonts/icon-font/fonts/avasta.ttf";
 import "../assets/fonts/icon-font/css/style.css";
 
+import "../sections/about/about.scss";
+
 import "../components/Layout/bootstrap-custom.scss";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";

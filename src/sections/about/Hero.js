@@ -32,6 +32,9 @@ const ImgRight = styled(Box)`
   }
 `;
 
+
+
+
 const Hero = () => {
   const { t } = useTranslation(["common"]);
 
@@ -40,8 +43,8 @@ const Hero = () => {
       {/* <!-- Hero Area --> */}
       <SectionStyled className="position-relative">
         <div className="pt-5"></div>
-        <Container>
-          <Row className="justify-content-center align-items-center position-relative">
+        <Container className = "class">
+          {/* <Row className="justify-content-center align-items-center position-relative">
             <Col
               size="12"
               md="5"
@@ -67,20 +70,22 @@ const Hero = () => {
                 data-aos-delay="500"
                 data-aos-once="true"
               >
-                <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
-                  <Title variant="hero" color="light">
+               
+              </div>
+            </Col>
+          </Row> */}
+
+<Box >
+                  <Title variant="hero" color="light" style ={{textAlign:'center'}}>
                     {t("Who We Are?")} <br className="d-none d-sm-block" />
                   </Title>
-                  <Text mb={4} color="light" opacity={0.7}>
+                  <Text mb={4} color="light" opacity={0.7} style ={{textAlign : 'center'}}>
                     {t("abouthero")}
                   </Text>
                   <div className="d-flex flex-column align-items-start pt-3">
-                    <Button mb={2}>Learn more</Button>
+                  <Button mb={2} style ={{alignSelf : 'center'}}>Learn more</Button>
                   </div>
                 </Box>
-              </div>
-            </Col>
-          </Row>
         </Container>
       </SectionStyled>
     </>

@@ -26,8 +26,8 @@ const Content2 = () => {
     <>
       <SectionStyled bg="dark">
         <Container>
-          <Row className="justify-content-center align-items-center">
-            <Col lg="6" className="my-5 my-lg-0">
+          <Row md="12" className="justify-content-center align-items-center">
+            <Col style={{marginRight: "10%"}} md="4" className="my-5 my-lg-0">
               <div className="">
                 <Box
                   className=" "
@@ -57,7 +57,7 @@ const Content2 = () => {
               </div>
             </Col>
             <Col
-              md="10"
+              md="6"
               lg="6"
               className="mt-3 mt-lg-0"
               data-aos="fade-right"
