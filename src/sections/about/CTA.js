@@ -43,12 +43,12 @@ const CTA = () => {
                 <Title color="light">{t("Want to join?")}</Title>
                 <Text color="light" opacity={0.7}>
                   {t(
-                    "Are you interested to join our team? Check out our job openings and apply on your suitable role."
+                   "Get Free Consultation on Mobile App Development From Experts with 25+ Years of Industry Experience"
                   )}
                 </Text>
               </Box>
               <Box>
-                <Button>{t("Check Job Openings")}</Button>
+                <Button>{t("Get Free Consultation Now.")}</Button>
               </Box>
             </Col>
           </Row>
