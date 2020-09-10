@@ -79,7 +79,7 @@ const ContentCard = ({
     <Box className="text-center">
       <img src={imageBrand} alt="" className="img-fluid" />
     </Box>
-    <Text color="lightShade" mt={4} mb={3} className="text-center mb-0">
+    <Text color="#262524" mt={4} mb={3} className="text-center mb-0">
       {children}
     </Text>
     <Box className={`mt-auto`}>
@@ -94,10 +94,10 @@ const ContentCard = ({
         />
       </Box>
       <Box className="flex-grow-1 text-center" mt={3}>
-        <Title color="light" variant="card" mb={1}>
+        <Title color="#262524" variant="card" mb={1}>
           {name}
         </Title>
-        <Text variant="small" color="lightShade" opacity={0.5}>
+        <Text variant="small" color="red">
           {company}
         </Text>
       </Box>
@@ -108,7 +108,7 @@ const ContentCard = ({
 const Reviews = () => {
   return (
     <>
-      <Section bg="dark">
+      <Section bg="#D9AB73">
         <Container>
           <Row className="justify-content-center mt-3">
             <Col lg="4" md="6" className="mb-5 mb-lg-0">
@@ -147,12 +147,12 @@ const Reviews = () => {
             </Col>
           </Row>
 
-          <SectionStyled bg="dark">
+          <SectionStyled bg="#D9AB73">
             <Container>
               <Row className="justify-content-center mb-5">
                 <Col lg="10">
                   <div className="text-center">
-                    <Title color="#F2E529">
+                    <Title color="#262524">
                       What Makes Us Different From Others?
                     </Title>
                   </div>

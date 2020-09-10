@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { rgba } from "polished";
 import styled from "styled-components";
+import imgPhone from "../../assets/image/jpeg/home2.jpg";
 const SectionStyled = styled(Section)``;
 import { Title, Section, Box, Text } from "../../components/Core";
 
@@ -56,7 +57,14 @@ const mission = () => (
     <Section bg="#F2F2F2">
       <Container>
         <Row className="justify-content-center">
-          <Col bg="#F2F2F2" lg="4"></Col>
+          <Col bg="#F2F2F2" lg="4">
+            <img
+              src={imgPhone}
+              alt=""
+              className="img-fluid rounded"
+              style={{ height: "300px", width: "100%" }}
+            />
+          </Col>
 
           <Col lg="8">
             <Box className="text-left" mb={[4, 5]}>
