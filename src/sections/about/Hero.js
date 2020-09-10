@@ -82,9 +82,9 @@ const Hero = () => {
                   <Text mb={4} color="light" opacity={0.7} style ={{textAlign : 'center'}}>
                     {t("abouthero")}
                   </Text>
-                  <div className="d-flex flex-column align-items-start pt-3">
+                  {/* <div className="d-flex flex-column align-items-start pt-3">
                   <Button mb={2} style ={{alignSelf : 'center'}}>Learn more</Button>
-                  </div>
+                  </div> */}
                 </Box>
         </Container>
       </SectionStyled>
